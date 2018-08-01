@@ -51,12 +51,13 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(mapStateToProps, mapDispatchToProps)(ShirtsContainer);
 
 const Wrapper = styled.div`
-  display: flex;
-  padding-right:10px;
+  display: grid;
+  grid-template-columns: 20% 77% 3%;
   margin-top: 250px;
 `;
 
 const ShirtGrid = styled.div`
   display:grid;
   grid-template-columns: 25% 25% 25% 25%;
+  grid-row-gap: 10px;
 `;

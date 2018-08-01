@@ -3,13 +3,12 @@
   font-family: karla;
 }
 .App-header {
-  height: 200px;
-  padding: 20px;
   color: #222;
   width:100%;
   display: flex;
-  align-content: space-between;
   align-items: baseline;
+  display: grid;
+  grid-template-columns: 30% 40% 10% 10% 10%;
   font-family: 'Lato', sans-serif;
   margin-bottom: 50px;
   position: fixed;
@@ -18,8 +17,9 @@
   background-color: white;
 }
 .App-title {
-  font-size: 80px;
+  font-size: 70px;
   letter-spacing: 20px;
+  
 }
 .App-header > div {
   flex-grow: 1;

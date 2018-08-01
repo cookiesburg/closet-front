@@ -72,29 +72,25 @@ const TileContainer = styled.div`
   height: 490px;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  margin-right: 3px;
-  
+
 
   :hover {
-    box-shadow: 0 0 8px gray;
     cursor: pointer;
+    box-shadow: 1px 1px 1px #b4adad;
+    border: 1px solid #b4adad;
   }
 
   .desc {
-    padding: 10px;
-    min-height: 8%;
-    padding-bottom: 20px;
-    border: 1px solid black;
-    border-radius: 0 0 3px 3px;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: black;
+    font-size: 14px;
   }
 
   div {
     display: flex;
-    justify-content: space-between;
-    align-items; center;
-    background: white;
-    color: gray;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .image {
     position: relative;
@@ -107,6 +103,7 @@ const TileContainer = styled.div`
     }
     img {
       max-width: 100%;
+      opacity: .9;
     }
   }
 `;

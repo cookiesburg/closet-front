@@ -10,6 +10,7 @@ export default class Head extends Component {
             <h1 className="App-title">CLOSET</h1>
           </Link>
         </div>
+        <div></div>
         <div className='menu-link'>
           <Link to='/'>
             <p>SEARCH</p>

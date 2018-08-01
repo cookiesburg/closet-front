@@ -45,7 +45,7 @@ class SearchFilter extends Component {
             <p>Max $ {this.state.value}</p>
             {/* <output for="price" onforminput="value = price.valueAsNumber;"></output> */}
           </div>
-          <button className='btn' onClick={this.props.resetFilter}><p>RESET FILTER</p></button>
+          <button className='btn' onClick={this.props.resetFilter}><p>RESET</p></button>
         </form>
       </Wrapper>
     );
