@@ -74,6 +74,7 @@ const TileContainer = styled.div`
   flex-direction: column;
   margin-top: 10px;
   margin-right: 3px;
+  
 
   :hover {
     box-shadow: 0 0 8px gray;

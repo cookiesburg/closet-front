@@ -12,6 +12,10 @@
   align-items: baseline;
   font-family: 'Lato', sans-serif;
   margin-bottom: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: white;
 }
 .App-title {
   font-size: 80px;
