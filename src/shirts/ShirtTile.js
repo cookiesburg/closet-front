@@ -69,15 +69,15 @@ export default ShirtTile;
 
 const TileContainer = styled.div`
   width: 270px;
-  height: 490px;
+  height: 450px;
   display: flex;
   flex-direction: column;
 
 
   :hover {
     cursor: pointer;
-    box-shadow: 1px 1px 1px #b4adad;
-    border: 1px solid #b4adad;
+    box-shadow: 1px 1px 1px var(--lightGray);
+    border: 1px solid #eeeef0;
   }
 
   .desc {

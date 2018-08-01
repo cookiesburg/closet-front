@@ -22,7 +22,9 @@ class ShirtsContainer extends Component {
     if (!isLoaded) return <h1>loading...</h1>;
     return (
         <Wrapper>
+          <div></div>
           <SearchFilter />
+          <div></div>
           <ShirtGrid>
             {
               (!filter) ?
@@ -52,12 +54,14 @@ export default connect(mapStateToProps, mapDispatchToProps)(ShirtsContainer);
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 20% 77% 3%;
-  margin-top: 250px;
+  grid-template-columns: 7% 20% 3% 60% 10%;
+  margin-top: 200px;
 `;
 
 const ShirtGrid = styled.div`
+  margin-top: 50px;
   display:grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 33% 33% 33%;
   grid-row-gap: 10px;
+  
 `;

@@ -1,6 +1,11 @@
+:root {
+  --lightGray: #eeeef0;
+  --gray: #9a9a9a;
+}
+
 .App {
   text-align: center;
-  font-family: karla;
+  font-family: 'karla';
 }
 .App-header {
   color: #222;
@@ -8,9 +13,8 @@
   display: flex;
   align-items: baseline;
   display: grid;
-  grid-template-columns: 30% 40% 10% 10% 10%;
+  grid-template-columns: 30% 40% 7% 7% 7% 10%;
   font-family: 'Lato', sans-serif;
-  margin-bottom: 50px;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -19,7 +23,7 @@
 .App-title {
   font-size: 70px;
   letter-spacing: 20px;
-  
+
 }
 .App-header > div {
   flex-grow: 1;
