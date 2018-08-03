@@ -7,7 +7,12 @@ class CartIcon extends Component {
   render() {
     return(
       <Cart>
-        { this.props.cartList.length }
+        <i class="material-icons">shopping_cart</i>
+        {
+          this.props.cartList.length === 0 ?
+          'empty' :
+          this.props.cartList.length
+        }
       </Cart>
     );
   }
@@ -26,11 +31,18 @@ export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
 // export default CartIcon;
 
 const Cart = styled.div`
-  border: 3px solid black;
   color: black;
   position: fixed;
   top: 70px;
   right: 60px;
   z-index: 3;
   padding: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-end;
+
+  i {
+    font-size: 30px;
+    padding-right: 10px;
+  }
 `;
