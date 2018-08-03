@@ -7,31 +7,23 @@ class CartIcon extends Component {
   render() {
     return(
       <Cart>
-        cart
+        { this.props.cartList.length }
       </Cart>
     );
   }
 }
 
-// const mapStateToProps = state => ({
-//   shirts: state.shirts.shirts,
-//   isLoaded: state.shirts.shirtsLoaded,
-//   brands: state.shirts.brands,
-//   filter: state.shirts.filter,
-//   filteredList: state.shirts.filteredList,
-// });
-//
-// const mapDispatchToProps = dispatch => bindActionCreators({
-//   getShirts,
-//   addBrandFilter,
-//   removeBrandFilter,
-//   changeMaxPrice,
-//   resetFilter
-// }, dispatch);
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
+const mapStateToProps = state => ({
+  isEmpty: state.cart.isEmpty,
+  cartList: state.cart.cartList,
+});
 
-export default CartIcon;
+const mapDispatchToProps = dispatch => bindActionCreators({
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
+
+// export default CartIcon;
 
 const Cart = styled.div`
   border: 3px solid black;
