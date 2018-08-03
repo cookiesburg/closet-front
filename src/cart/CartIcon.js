@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 class CartIcon extends Component {
   render() {
     return(
+      <Link to='/shopping-cart'>
       <Cart>
         <i class="material-icons">shopping_cart</i>
         {
@@ -14,6 +16,7 @@ class CartIcon extends Component {
           this.props.cartList.length
         }
       </Cart>
+    </Link>
     );
   }
 }
