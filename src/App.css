@@ -1,48 +1,57 @@
 :root {
   --lightGray: #eeeef0;
-  --gray: #9a9a9a;
+  --gray:#9a9a9a;
 }
 
 .App {
-  text-align: center;
   font-family: 'karla';
 }
 .App-header {
-  color: #222;
-  width:100%;
-  display: flex;
-  align-items: baseline;
-  display: grid;
-  grid-template-columns: 30% 40% 7% 7% 7% 10%;
+  width: 100%;
   font-family: 'Lato', sans-serif;
   position: fixed;
   top: 0;
   z-index: 2;
+  border-bottom: 2px solid var(--lightGray);
+  display:flex;
+  flex-direction: column;
   background-color: white;
 }
+.title-div{
+}
 .App-title {
-  font-size: 70px;
+  font-size: 50px;
   letter-spacing: 20px;
-
+  padding-left: 100px;
 }
-.App-header > div {
-  flex-grow: 1;
-  font-size: 17px;
+.nav-bar{
+  height:45px;
+  display: grid;
+  grid-template-columns: 30% 20% 20% 20% 10%;
+  background-color: var(--lightGray);
+  color: white;
+}
+
+.nav-bar > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar > div > a {
   letter-spacing: 3px;
+  font-size: 17px;
+  color: black;
 }
 
-.App-header > div:nth-child(1) {
-  flex-grow: 3;
-}
+
+
 a {
   text-decoration: none;
+  font-size: 17px;
+  color: white;
 }
 a:visited {
   color:black;
-}
-.menu-link {
-  text-align: left;
-  font-weight: bold;
 }
 
 .modal-background {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import img from '../img/blueShirtModel.jpg';
+import img2 from '../img/flowerShirt.jpg';
+import img3 from '../img/oceanShirt.jpg';
 import Toggle from '../utilities/Toggle';
 import Modal from '../utilities/Modal';
 import ShirtDisplay from './ShirtDisplay';
@@ -27,17 +29,20 @@ class ShirtTile extends Component {
 
 
   render() {
+    const images = [img2, img3];
+    const rand = Math.floor((Math.random() * 2) );
+    const image = images[rand];
     const { shirt, user } = this.props;
     return(
       <Toggle>
         {({on, toggle}) => (
           <div>
             <Modal on={on} toggle={toggle}>
-              <ShirtDisplay user={user} shirt={shirt} match={this.state.match} />
+              <ShirtDisplay user={user} shirt={shirt} match={this.state.match} image={image} />
             </Modal>
             <TileContainer onClick={toggle}>
               <div className='image'>
-                <img src={img} alt="blue shirt"/>
+                <img src={image} alt="blue shirt"/>
                 {
                   this.state.match ?
                   <p className='match'>{this.state.match}%</p> :
@@ -53,23 +58,11 @@ class ShirtTile extends Component {
   }
 }
 
-
-// const mapStateToProps = state => ({
-//   shirt: state.shirts.shirt,
-//   match: state.shirts.userMatch,
-//   isLoaded: state.shirts.calcLoaded,
-// });
-//
-// const mapDispatchToProps = dispatch => bindActionCreators({
-//   calcMatch,
-// }, dispatch);
-
-// export default connect(mapStateToProps, mapDispatchToProps)(ShirtTile);
 export default ShirtTile;
 
 const TileContainer = styled.div`
-  width: 270px;
-  height: 450px;
+
+  height: 460px;
   display: flex;
   flex-direction: column;
 
@@ -102,7 +95,8 @@ const TileContainer = styled.div`
       color: white;
     }
     img {
-      max-width: 100%;
+      width: auto;
+      max-height: 415px;
       opacity: .9;
     }
   }

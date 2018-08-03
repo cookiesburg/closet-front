@@ -5,11 +5,11 @@ import img from '../img/blueShirtModel.jpg';
 
 class ShirtDisplay extends Component {
   render() {
-    const { shirt, user, match } = this.props;
+    const { shirt, user, match, image } = this.props;
     return(
       <DisContainer>
         <div className='left'>
-          <img src={img} alt="blue shirt"/>
+          <img src={image} alt="blue shirt"/>
         </div>
         <div className='right'>
           <div className='bottom'>
@@ -36,7 +36,7 @@ const DisContainer = styled.div`
     width: auto;
 
     img {
-      max-height: auto;
+      max-height: 570px;
       max-width: 430px;
     }
   }

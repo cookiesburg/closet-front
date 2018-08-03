@@ -76,7 +76,7 @@ const Wrapper = styled.div`
   display:flex;
   flex-direction: column;
   font-family: 'karla';
-  max-height: 600px;
+  max-height: 500px;
   border: 1px solid var(--gray);
   position: sticky;
   top: 180px

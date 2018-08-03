@@ -62,6 +62,7 @@ const ShirtGrid = styled.div`
   margin-top: 50px;
   display:grid;
   grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 10px;
   grid-row-gap: 10px;
-  
+
 `;
