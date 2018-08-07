@@ -1,40 +1,62 @@
-.App {
-  text-align: center;
-  font-family: karla;
-}
-.App-header {
-  height: 200px;
-  padding: 20px;
-  color: #222;
-  width:100%;
-  display: flex;
-  align-content: space-between;
-  align-items: baseline;
-  font-family: 'Lato', sans-serif;
-  margin-bottom: 50px;
-}
-.App-title {
-  font-size: 80px;
-  letter-spacing: 20px;
-}
-.App-header > div {
-  flex-grow: 1;
-  font-size: 17px;
-  letter-spacing: 3px;
+:root {
+  --lightGray: #eeeef0;
+  --gray:#9a9a9a;
+  --lightBlack:#292929;
 }
 
-.App-header > div:nth-child(1) {
-  flex-grow: 3;
+.App {
+  font-family: 'karla';
 }
+.App-header {
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-bottom: 2px solid var(--lightGray);
+  display:flex;
+  flex-direction: column;
+  background-color: var(--lightBlack);
+}
+.title-div{
+}
+.App-title {
+  padding-left: 120px;
+  align-items: center;
+  font-size: 28px;
+  letter-spacing: 5px;
+  color:white;
+}
+.nav-bar{
+  height:45px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 10% 10%;
+  background-color: var(--lightGray);
+  border-top: 3px solid black;
+  color: white;
+}
+
+.nav-bar > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar > div > a {
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+
+
 a {
   text-decoration: none;
+  font-size: 17px;
+  color: white;
 }
 a:visited {
   color:black;
-}
-.menu-link {
-  text-align: left;
-  font-weight: bold;
 }
 
 .modal-background {

@@ -27,8 +27,9 @@ class SearchFilter extends Component {
   render() {
     return(
       <Wrapper>
-        <p>FILTER SEARCH</p>
+        <h3>SEARCH FILTERS</h3>
         <form>
+          <h4>BRANDS</h4>
           <div className='field brands'>
             {this.props.brands.map(brand =>
               <div key={brand.id}>
@@ -38,14 +39,14 @@ class SearchFilter extends Component {
             )}
           </div>
           <div className='field'>
-            <input type="range" min="0" max="100" step="5"
+            <h4>Max ${this.state.value}</h4>
+            <input type="range" min="20" max="100" step="5"
               value={this.state.value}
               onChange={this.handlePriceFilter}
             />
-            <p>Max $ {this.state.value}</p>
             {/* <output for="price" onforminput="value = price.valueAsNumber;"></output> */}
           </div>
-          <button className='btn' onClick={this.props.resetFilter}><p>RESET FILTER</p></button>
+          <button className='btn' onClick={this.props.resetFilter}><p>RESET</p></button>
         </form>
       </Wrapper>
     );
@@ -72,42 +73,72 @@ export default connect(mapStateToProps, mapDispatchToProps)(SearchFilter);
 
 
 const Wrapper = styled.div`
-  min-width: 280px;
   display:flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-left: 50px;
+  font-family: 'karla';
+  max-height: 500px;
+  border: 1px solid var(--gray);
+  position: sticky;
+  top: 140px
+  h3 {
+    font-size: 15px;
+    font-weight: 800;
+    padding: 15px 20px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: var(--lightBlack);
+    position: relative;
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
 
+  form {
+    padding-left: 15px;
+
+    h4{
+      position: relative;
+      margin-top: 0;
+      display: flex;
+      justify-content: flex-start;
+      font-size: 13px;
+    }
+    }
     button {
-      padding: 12px;
-      border-radius: 12px;
-      background: blue;
+      margin-top: 30px;
+      width: 120px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: linear-gradient(#4d89f0, blue);
+      border-radius: 4px;
       p {
         font-size: 12px;
         color: white;
+        letter-spacing: 1px;
+        font-weight: 500;
       }
       :hover{
         cursor: pointer;
+        border:black;
+        box-shadow: 1px 1px 1px black;
       }
     }
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
 
-    p {
-      font-size: 18px;
-      letter-spacing: 2px;
-      font-weight: bold;
-    }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
 
   .brands {
     align-items: flex-start;
     font-size: 12px;
-    font-weight: bold;
 
     div {
       margin-bottom: 10px;

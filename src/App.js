@@ -4,6 +4,7 @@ import Head from './Head';
 import ShirtsContainer from './shirts/ShirtsContainer';
 import AboutContainer from './AboutContainer';
 import ClosetContainer from './ClosetContainer';
+import CartContainer from './cart/CartContainer';
 import { Provider } from 'react-redux';
 import rootReducer from './rootReducer';
 import { applyMiddleware, createStore } from 'redux';
@@ -34,6 +35,7 @@ const App = () => (
             <Route exact path='/' component={ShirtsContainer} />
             <Route path='/about' component={AboutContainer} />
             <Route path='/my-closet' component={ClosetContainer} />
+            <Route path='/shopping-cart' component={CartContainer} />
         </Switch>
       </div>
     </Router>

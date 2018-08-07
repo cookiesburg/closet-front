@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "components": "^0.1.0",
+    "material-design-icons": "^3.0.1",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

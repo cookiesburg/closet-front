@@ -22,7 +22,11 @@ class ShirtsContainer extends Component {
     if (!isLoaded) return <h1>loading...</h1>;
     return (
         <Wrapper>
+          <div></div>
           <SearchFilter />
+          <div></div>
+          <div>
+          <h4>SEARCH RESULTS</h4>
           <ShirtGrid>
             {
               (!filter) ?
@@ -30,6 +34,7 @@ class ShirtsContainer extends Component {
               filteredList.map(shirt => <ShirtTile key={shirt.id} user={user} shirt={shirt}/>)
             }
           </ShirtGrid>
+        </div>
         </Wrapper>
     );
   }
@@ -51,12 +56,22 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(mapStateToProps, mapDispatchToProps)(ShirtsContainer);
 
 const Wrapper = styled.div`
-  display: flex;
-  padding-right:10px;
+  display: grid;
+  grid-template-columns: 7% 20% 3% 60% 10%;
+  margin-top: 150px;
+
+  h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
 `;
 
 const ShirtGrid = styled.div`
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  margin-top: 50px;
+  display:grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
 `;

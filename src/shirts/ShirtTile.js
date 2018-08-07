@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import img from '../img/blueShirtModel.jpg';
+import img2 from '../img/flowerShirt.jpg';
+import img3 from '../img/oceanShirt.jpg';
 import Toggle from '../utilities/Toggle';
 import Modal from '../utilities/Modal';
 import ShirtDisplay from './ShirtDisplay';
@@ -27,24 +29,31 @@ class ShirtTile extends Component {
 
 
   render() {
+    const images = [img2, img3];
+    const rand = Math.floor((Math.random() * 2) );
+    const image = images[rand];
     const { shirt, user } = this.props;
     return(
       <Toggle>
         {({on, toggle}) => (
           <div>
             <Modal on={on} toggle={toggle}>
-              <ShirtDisplay user={user} shirt={shirt} match={this.state.match} />
+              <ShirtDisplay user={user} shirt={shirt} match={this.state.match} image={image} toggle={toggle} />
             </Modal>
             <TileContainer onClick={toggle}>
               <div className='image'>
-                <img src={img} alt="blue shirt"/>
+                <img src={image} alt="blue shirt"/>
                 {
                   this.state.match ?
                   <p className='match'>{this.state.match}%</p> :
                   <p className='match'>calculating...</p>
                 }
               </div>
-              <div className='desc'>${shirt.price}<span>{shirt.brand.name}</span></div>
+              <div className='desc'>
+                <div>{shirt.brand.name}</div>
+                <div>Model title and size (M)</div>
+                <div>${shirt.price}</div>
+              </div>
             </TileContainer>
           </div>
         )}
@@ -53,47 +62,32 @@ class ShirtTile extends Component {
   }
 }
 
-
-// const mapStateToProps = state => ({
-//   shirt: state.shirts.shirt,
-//   match: state.shirts.userMatch,
-//   isLoaded: state.shirts.calcLoaded,
-// });
-//
-// const mapDispatchToProps = dispatch => bindActionCreators({
-//   calcMatch,
-// }, dispatch);
-
-// export default connect(mapStateToProps, mapDispatchToProps)(ShirtTile);
 export default ShirtTile;
 
 const TileContainer = styled.div`
-  width: 270px;
-  height: 490px;
+
+  height: 500px;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  margin-right: 3px;
+
 
   :hover {
-    box-shadow: 0 0 8px gray;
     cursor: pointer;
+    box-shadow: 1px 1px 1px var(--lightGray);
+    border: 1px solid #eeeef0;
   }
 
   .desc {
-    padding: 10px;
-    min-height: 8%;
-    padding-bottom: 20px;
-    border: 1px solid black;
-    border-radius: 0 0 3px 3px;
+    padding-left: 5px;
+    padding-top: 5px;
+    color: black;
+    font-size: 14px;
   }
 
   div {
     display: flex;
-    justify-content: space-between;
-    align-items; center;
-    background: white;
-    color: gray;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .image {
     position: relative;
@@ -102,10 +96,12 @@ const TileContainer = styled.div`
       padding-left:10px;
       position: absolute;
       font-size: 16px;
-      color: white;
+      color: var(--gray);
     }
     img {
-      max-width: 100%;
+      width: 100%;
+      max-height: 415px;
+      opacity: .9;
     }
   }
 `;
