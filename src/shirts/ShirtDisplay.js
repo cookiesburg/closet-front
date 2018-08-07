@@ -30,7 +30,9 @@ class ShirtDisplay extends Component {
               <p>{shirt.brand.name}</p>
             </div>
             <p>{shirt.desc}</p>
-            <button onClick={ (e) => {this.submitItem(e)}}>Add to Cart</button>
+            <button onClick={ (e) => {this.submitItem(e)}}>
+              <i class="material-icons">add_circle</i>
+            </button>
           </div>
         </div>
       </DisContainer>
@@ -79,7 +81,15 @@ const DisContainer = styled.div`
       }
       button {
         padding: 10px;
-        margin-left: 50%;
+        margin-left: 100%;
+        background-color: :white;
+        border:none;
+        color:green;
+        i{
+        }
+        :hover{
+          cursor:pointer;
+        }
       }
       .stats {
         p {
