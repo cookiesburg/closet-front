@@ -11,7 +11,8 @@ class ShirtDisplay extends Component {
   submitItem = (e) => {
     e.preventDefault();
     const item = this.props.shirt;
-    this.props.addItem(this.item);
+    console.log(item, 'submit');
+    this.props.addItem(item);
   };
 
   render() {

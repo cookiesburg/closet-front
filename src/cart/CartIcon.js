@@ -40,12 +40,12 @@ const Cart = styled.div`
   right: 60px;
   z-index: 3;
   padding: 10px;
-  font-size: 18px;
+  font-size: 13px;
   display: flex;
   align-items: flex-end;
 
   i {
-    font-size: 30px;
+    font-size: 20px;
     padding-right: 10px;
   }
 `;

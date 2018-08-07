@@ -95,7 +95,7 @@ const TileContainer = styled.div`
       color: white;
     }
     img {
-      width: auto;
+      width: 100%;
       max-height: 415px;
       opacity: .9;
     }
