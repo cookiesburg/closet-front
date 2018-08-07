@@ -15,20 +15,22 @@
   border-bottom: 2px solid var(--lightGray);
   display:flex;
   flex-direction: column;
-  background-color: white;
+  background-color: black;
 }
 .title-div{
 }
 .App-title {
-  font-size: 50px;
-  letter-spacing: 20px;
-  padding-left: 100px;
+  font-size: 30px;
+  letter-spacing: 10px;
+  padding-left: 120px;
+  color:white;
 }
 .nav-bar{
   height:45px;
   display: grid;
   grid-template-columns: 30% 20% 20% 20% 10%;
-  background-color: var(--lightGray);
+  background-color: white;
+  border-top: 3px solid black;
   color: white;
 }
 
@@ -39,7 +41,8 @@
 }
 .nav-bar > div > a {
   letter-spacing: 3px;
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: bold;
   color: black;
 }
 

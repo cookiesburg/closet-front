@@ -79,7 +79,7 @@ const Wrapper = styled.div`
   max-height: 500px;
   border: 1px solid var(--gray);
   position: sticky;
-  top: 180px
+  top: 145px
   h3 {
     font-size: 15px;
     font-weight: 800;
