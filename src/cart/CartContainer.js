@@ -12,7 +12,7 @@ class CartContainer extends Component {
         <div className='left'>
           <Link to='/'>
             <button>
-              <i class="material-icons">arrow_back_ios</i> To Search
+              <i class="material-icons">arrow_back_ios</i> Search
             </button>
           </Link>
         </div>
@@ -21,7 +21,12 @@ class CartContainer extends Component {
         {
           this.props.isEmpty ?
           'Your shopping cart is empty - go back and by stuff!' :
-          this.props.cartList.map(item => <CartItemBox key={item.id} item={item} />)
+            <div className='not-empty'>
+              {this.props.cartList.map(item => <CartItemBox key={item.id} item={item} />)}
+              <button className='checkoutBtn'>
+                <i class="material-icons">payment</i>
+              </button>
+            </div>
 
         }
 
@@ -55,6 +60,22 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .not-empty{
+      .checkoutBtn{
+        padding: 10px;
+        margin-left: 90%;
+        background:white;
+        border:none;
+        i{
+          margin-top: 30px;
+          color:green;
+        }
+        :hover{
+          cursor:pointer;
+        }
+      }
+    }
   }
   .left{
     display: flex;

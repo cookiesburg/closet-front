@@ -25,6 +25,8 @@ class ShirtsContainer extends Component {
           <div></div>
           <SearchFilter />
           <div></div>
+          <div>
+          <h4>SEARCH RESULTS</h4>
           <ShirtGrid>
             {
               (!filter) ?
@@ -32,6 +34,7 @@ class ShirtsContainer extends Component {
               filteredList.map(shirt => <ShirtTile key={shirt.id} user={user} shirt={shirt}/>)
             }
           </ShirtGrid>
+        </div>
         </Wrapper>
     );
   }
@@ -55,7 +58,13 @@ export default connect(mapStateToProps, mapDispatchToProps)(ShirtsContainer);
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 7% 20% 3% 60% 10%;
-  margin-top: 200px;
+  margin-top: 150px;
+
+  h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
 `;
 
 const ShirtGrid = styled.div`
