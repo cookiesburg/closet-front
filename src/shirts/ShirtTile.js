@@ -38,7 +38,7 @@ class ShirtTile extends Component {
         {({on, toggle}) => (
           <div>
             <Modal on={on} toggle={toggle}>
-              <ShirtDisplay user={user} shirt={shirt} match={this.state.match} image={image} />
+              <ShirtDisplay user={user} shirt={shirt} match={this.state.match} image={image} toggle={toggle} />
             </Modal>
             <TileContainer onClick={toggle}>
               <div className='image'>

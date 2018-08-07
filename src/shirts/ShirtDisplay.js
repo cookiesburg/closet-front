@@ -16,7 +16,7 @@ class ShirtDisplay extends Component {
   };
 
   render() {
-    const { shirt, user, match, image } = this.props;
+    const { shirt, user, match, image, toggle } = this.props;
     return(
       <DisContainer>
         <div className='left'>
@@ -30,7 +30,10 @@ class ShirtDisplay extends Component {
               <p>{shirt.brand.name}</p>
             </div>
             <p>{shirt.desc}</p>
-            <button onClick={ (e) => {this.submitItem(e)}}>
+            <button onClick={ (e) => {
+              this.submitItem(e);
+              toggle();
+            }}>
               <i class="material-icons">add_circle</i>
             </button>
           </div>
