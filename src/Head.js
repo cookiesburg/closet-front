@@ -15,14 +15,15 @@ export default class Head extends Component {
         <div className='nav-bar'>
           <div></div>
           <div className='search-link'>
-            <Link to='/'>Search</Link>
+            <Link to='/'>SEARCH</Link>
           </div>
           <div className='about-link'>
-            <Link to='/about'>About</Link>
+            <Link to='/about'>ABOUT</Link>
           </div>
           <div className='account-link'>
-            <Link to='/my-closet'>Settings</Link>
+            <Link to='/my-closet'>ACCOUNT</Link>
           </div>
+          <div></div>
           <CartIcon />
         </div>
       </header>

@@ -49,7 +49,11 @@ class ShirtTile extends Component {
                   <p className='match'>calculating...</p>
                 }
               </div>
-              <div className='desc'>${shirt.price}<span>{shirt.brand.name}</span></div>
+              <div className='desc'>
+                <div>{shirt.brand.name}</div>
+                <div>Model title and size (M)</div>
+                <div>${shirt.price}</div>
+              </div>
             </TileContainer>
           </div>
         )}
@@ -62,7 +66,7 @@ export default ShirtTile;
 
 const TileContainer = styled.div`
 
-  height: 460px;
+  height: 500px;
   display: flex;
   flex-direction: column;
 
@@ -74,8 +78,8 @@ const TileContainer = styled.div`
   }
 
   .desc {
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
     color: black;
     font-size: 14px;
   }
@@ -92,7 +96,7 @@ const TileContainer = styled.div`
       padding-left:10px;
       position: absolute;
       font-size: 16px;
-      color: white;
+      color: var(--gray);
     }
     img {
       width: 100%;

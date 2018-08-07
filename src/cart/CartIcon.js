@@ -34,10 +34,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
 // export default CartIcon;
 
 const Cart = styled.div`
-  color: white;
-  position: fixed;
-  top: 25px;
-  right: 60px;
+  color: black;
   z-index: 3;
   padding: 10px;
   font-size: 13px;

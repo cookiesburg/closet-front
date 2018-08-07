@@ -20,16 +20,17 @@
 .title-div{
 }
 .App-title {
-  font-size: 30px;
-  letter-spacing: 10px;
   padding-left: 120px;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: 5px;
   color:white;
 }
 .nav-bar{
   height:45px;
   display: grid;
-  grid-template-columns: 30% 20% 20% 20% 10%;
-  background-color: white;
+  grid-template-columns: 20% 20% 20% 20% 10% 10%;
+  background-color: var(--lightGray);
   border-top: 3px solid black;
   color: white;
 }
@@ -40,10 +41,10 @@
   align-items: center;
 }
 .nav-bar > div > a {
-  letter-spacing: 3px;
-  font-size: 15px;
+  letter-spacing: 2px;
+  font-size: 12px;
   font-weight: bold;
-  color: black;
+  color: var(--gray);
 }
 
 
