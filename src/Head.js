@@ -18,10 +18,10 @@ export default class Head extends Component {
             <Link to='/'>SEARCH</Link>
           </div>
           <div className='about-link'>
-            <Link to='/about'>ABOUT</Link>
+            <Link to='/'>ABOUT</Link>
           </div>
           <div className='account-link'>
-            <Link to='/my-closet'>ACCOUNT</Link>
+            <Link to='/'>ACCOUNT</Link>
           </div>
           <div></div>
           <CartIcon />

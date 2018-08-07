@@ -86,7 +86,7 @@ const Wrapper = styled.div`
     padding: 15px 20px;
     letter-spacing: 1px;
     color: white;
-    background-color: black;
+    background-color: var(--lightBlack);
     position: relative;
     margin-top: 0;
     display: flex;
